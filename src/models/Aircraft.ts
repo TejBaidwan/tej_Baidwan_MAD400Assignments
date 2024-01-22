@@ -5,9 +5,9 @@ export class Aircraft {
   constructor(
     public planeModel: string,
     public capacity: number,
-    public fuelStorage: number,
-    public retired: boolean = false,
-    public owner?: string
+    public engines: number,
+    public flyingStatus: boolean = false,
+    public nextMaintenance?: string
   ) {
   }
 }

@@ -1,3 +1,5 @@
+<!-- This code displays the data from app.component.ts which is the array of Aircraft objects-->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,19 +7,26 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>First Angular Project</title>
+  <title>Airplanes List</title>
 </head>
 <body>
-    <h1>This is my first Angular project!</h1>
-
-    <h2>Name</h2>
-    <p>My name is Tej Baidwan and I am 21 years old! My student number at St.Clair is
-    0806279.</p>
-
-    <h2>About Me</h2>
-    <p>I am passionate about programming and anything related to technology. I play soccer
-    and basketball for fun, and I also have a hobby of selling products on Facebook and
-    Amazon.</p>
-
+<div class="container">
+  <h1>AIRCRAFT LIST</h1>
+  <div *ngIf="aircraft.length === 0; else showAircraft">
+    There are no airplanes to display.
+  </div>
+  <ng-template #showAircraft>
+    <div *ngFor="let airplane of aircraft, let i = index">
+      <div class="airplane-details">
+        <p><strong> {{ i + 1 }}. Model:</strong> {{ airplane.planeModel }},
+          <strong>Seating Capacity:</strong> {{ airplane.capacity }},
+          <strong>Engines:</strong> {{ airplane.engines }},
+          <strong>Flying Now:</strong> {{ airplane.flyingStatus }},
+          <strong>Next Maintenance:</strong> {{ airplane.nextMaintenance || "N/A"}}</p>
+      </div>
+    </div>
+  </ng-template>
+</div>
 </body>
 </html>
+
