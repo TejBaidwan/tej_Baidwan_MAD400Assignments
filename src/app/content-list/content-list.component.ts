@@ -14,6 +14,10 @@ import {NgClass, NgForOf} from "@angular/common";
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.css'
 })
+
+/**
+ * Creating an array of IContent objects
+ */
 export class ContentListComponent {
   airplaneList: IContent[] = [
     {

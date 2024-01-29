@@ -1,3 +1,5 @@
+<!-- The code to display the content items in the airplane array -->
+
 <ng-container *ngFor="let airplane of airplaneList; let even = even">
   <app-content-list-item [contentItem]="airplane" [ngClass]="{ 'even': even }"></app-content-list-item>
   {{ even }}
