@@ -1,4 +1,4 @@
-export interface IContent {
+export interface IAircraft {
   name: string;
   imgSrc: string;
   description: string;

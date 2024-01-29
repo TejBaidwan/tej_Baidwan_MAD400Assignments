@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { IContent } from "../../models/IContent";
+import { IAircraft } from "../../models/IAircraft";
 import {NgForOf} from "@angular/common";
 
 @Component({
@@ -12,5 +12,5 @@ import {NgForOf} from "@angular/common";
   styleUrl: './content-list-item.component.css'
 })
 export class ContentListItemComponent {
-  @Input() contentItem?: IContent;
+  @Input() contentItem?: IAircraft;
 }

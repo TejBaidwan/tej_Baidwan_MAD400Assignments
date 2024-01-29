@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IContent } from "../../models/IContent";
+import { IAircraft } from "../../models/IAircraft";
 import {ContentListItemComponent} from "../content-list-item/content-list-item.component";
 import {NgClass, NgForOf} from "@angular/common";
 
@@ -16,10 +16,10 @@ import {NgClass, NgForOf} from "@angular/common";
 })
 
 /**
- * Creating an array of IContent objects
+ * Creating an array of IAircraft objects
  */
 export class ContentListComponent {
-  airplaneList: IContent[] = [
+  airplaneList: IAircraft[] = [
     {
       name: 'Boeing 747',
       imgSrc: 'assets/b747.jpg',
