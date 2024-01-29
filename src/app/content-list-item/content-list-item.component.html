@@ -1,9 +1,12 @@
-<div class="content-list-item" [style.border]="'2px solid black'">
-  <h2>{{ contentItem?.name }}</h2>
+<div class="content-list-item">
+  <h1>{{ contentItem?.name }}</h1>
   <img [src]="contentItem?.imgSrc" alt="{{ contentItem?.name }} Image" />
 
-  <p><strong>Description:</strong> {{ contentItem?.description }}</p>
-  <p><strong>Author:</strong> {{ contentItem?.author }}</p>
-  <p><strong>Type:</strong> {{ contentItem?.type }}</p>
-  <p><strong>Tags:</strong> {{ contentItem?.tags.join(', ') }}</p>
+  <h2><strong>Description:</strong> {{ contentItem?.description }}</h2>
+  <h2><strong>Author:</strong> {{ contentItem?.author }}</h2>
+  <h2><strong>Type:</strong> {{ contentItem?.type }}</h2>
+  <h2><strong>Tags:</strong></h2>
+  <ul>
+    <li *ngFor="let tag of contentItem?.tags">{{ tag }}</li>
+  </ul>
 </div>

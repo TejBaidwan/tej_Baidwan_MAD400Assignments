@@ -1,4 +1,5 @@
-<app-content-list-item [contentItem]="airplaneList[0]"></app-content-list-item>
-<app-content-list-item [contentItem]="airplaneList[1]"></app-content-list-item>
-<app-content-list-item [contentItem]="airplaneList[2]"></app-content-list-item>
-<app-content-list-item [contentItem]="airplaneList[3]"></app-content-list-item>
+<ng-container *ngFor="let airplane of airplaneList; let even = even">
+  <app-content-list-item [contentItem]="airplane" [ngClass]="{ 'even': even }"></app-content-list-item>
+  {{ even }}
+</ng-container>
+

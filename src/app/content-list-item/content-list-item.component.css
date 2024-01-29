@@ -1,0 +1,11 @@
+.content-list-item.even {
+  background-color: green;
+}
+
+.content-list-item:not(even) {
+  background-color: red;
+}
+
+.content-list-item {
+  border: 2px solid black;
+}

@@ -1,10 +1,13 @@
 import {Component, Input} from '@angular/core';
 import { IContent } from "../../models/IContent";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-content-list-item',
   standalone: true,
-  imports: [],
+  imports: [
+    NgForOf
+  ],
   templateUrl: './content-list-item.component.html',
   styleUrl: './content-list-item.component.css'
 })
