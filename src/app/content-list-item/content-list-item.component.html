@@ -1,1 +1,9 @@
-<p>content-list-item works!</p>
+<div class="content-list-item" [style.border]="'2px solid black'">
+  <h2>{{ contentItem?.name }}</h2>
+  <img [src]="contentItem?.imgSrc" alt="{{ contentItem?.name }} Image" />
+
+  <p><strong>Description:</strong> {{ contentItem?.description }}</p>
+  <p><strong>Author:</strong> {{ contentItem?.author }}</p>
+  <p><strong>Type:</strong> {{ contentItem?.type }}</p>
+  <p><strong>Tags:</strong> {{ contentItem?.tags.join(', ') }}</p>
+</div>
