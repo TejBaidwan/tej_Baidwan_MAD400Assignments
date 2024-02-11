@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { IAircraft } from "../../models/IAircraft";
 import {ContentListItemComponent} from "../content-list-item/content-list-item.component";
 import {NgClass, NgForOf} from "@angular/common";
+import { AircraftService } from '../services/aircraft.service';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-content-list',
@@ -18,7 +20,19 @@ import {NgClass, NgForOf} from "@angular/common";
 /**
  * Creating an array of IAircraft objects
  */
-export class ContentListComponent {
+export class ContentListComponent implements OnInit{
+
+  airplaneList: IAircraft[] = [];
+
+  constructor(private aircraftService: AircraftService) {
+
+  }
+
+  ngOnInit(): void {
+    this.airplaneList = this.aircraftService.fetchAircraft()
+  }
+
+
   // airplaneList: IAircraft[] = [
   //   {
   //     name: 'Boeing 747',

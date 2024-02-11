@@ -10,7 +10,7 @@ export class AircraftService {
 
   constructor() { }
 
-  fetchAircraft(): Observable<IAircraft[]> {
-    return of(AIRCRAFTLIST);
+  fetchAircraft(): IAircraft[] {
+    return (AIRCRAFTLIST);
   }
 }
