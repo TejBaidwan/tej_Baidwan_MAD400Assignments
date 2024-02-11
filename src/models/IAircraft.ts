@@ -1,4 +1,5 @@
 export interface IAircraft {
+  id: number;
   name: string;
   imgSrc: string;
   description: string;

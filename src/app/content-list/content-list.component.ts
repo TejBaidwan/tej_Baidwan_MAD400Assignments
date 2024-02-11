@@ -3,7 +3,6 @@ import { IAircraft } from "../../models/IAircraft";
 import {ContentListItemComponent} from "../content-list-item/content-list-item.component";
 import {NgClass, NgForOf} from "@angular/common";
 import { AircraftService } from '../services/aircraft.service';
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-content-list',
@@ -24,12 +23,11 @@ export class ContentListComponent implements OnInit{
 
   airplaneList: IAircraft[] = [];
 
-  constructor(private aircraftService: AircraftService) {
-
-  }
+  constructor(private aircraftService: AircraftService) { }
 
   ngOnInit(): void {
-    this.airplaneList = this.aircraftService.fetchAircraft()
+    this.aircraftService.fetchAircraft()
+      .subscribe(aircraftList => this.airplaneList = aircraftList);
   }
 
 
