@@ -1,6 +1,6 @@
 import {IAircraft} from "../../../models/IAircraft";
 
-export const airplaneList: IAircraft[] = [
+export const AIRCRAFTLIST: IAircraft[] = [
   {
     name: 'Boeing 747',
     imgSrc: 'assets/b747.jpg',
