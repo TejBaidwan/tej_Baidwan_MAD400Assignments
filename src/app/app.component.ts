@@ -17,13 +17,16 @@ import {AircraftService} from "./services/aircraft.service";
 export class AppComponent implements OnInit {
   title = '';
 
-  //
+  //The selected aircraft in question
   selectedAircraft: IAircraft | undefined
 
+  //Service constructor
   constructor(private aircraftService: AircraftService) {
 
   }
 
+  //Onit method to retrieve the id #4 object in the array, which is the Concorde object
+  //Its placed above the existing list from Assignment 3 as a content-list-item
   ngOnInit(): void {
      this.aircraftService.fetchAircraftById(4).subscribe
      (aircraft => this.selectedAircraft = aircraft)
