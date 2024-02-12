@@ -1,5 +1,6 @@
 import {IAircraft} from "../../../models/IAircraft";
 
+//Array of IAircraft objects
 export const AIRCRAFTLIST: IAircraft[] = [
   {
     id: 1,
